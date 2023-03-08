@@ -21,5 +21,5 @@ fun main(){
     if (isPrima) {
         println("$input adalah bilangan prima.")
     } else {
-        println("$input bukan bilangan prima.")}
+        println("$input bukan bilangan prima.")}
 }
