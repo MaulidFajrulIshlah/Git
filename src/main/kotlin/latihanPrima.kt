@@ -1,4 +1,5 @@
 fun main(){
+
     print("Masukkan angka : ")
     val input = readLine()?.toIntOrNull()
 
@@ -8,18 +9,18 @@ fun main(){
     }
 
     var i = 2
-    var isPrima = true
+    var prima = true
 
     while (i < input) {
         if (input % i == 0) {
-            isPrima = false
+            prima = false
             break
         }
         i++
     }
 
-    if (isPrima) {
-        println("$input adalah bilangan prima.")
+    if (prima) {
+        println("$input Adalah bilangan prima.")
     } else {
-        println("$input bukan bilangan prima.")}
+        println("$input Bukan bilangan prima.")}
 }
