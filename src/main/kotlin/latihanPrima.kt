@@ -1,18 +1,9 @@
 fun main(){
-    println("Masukan Angka: ")
-    var inputAngka = readLine()!!.toInt()
-
-    var bilanganPrima = false
-
-    for (i in 2 .. inputAngka / 2 ){
-        if (inputAngka % i == 0){
-            bilanganPrima = true
-            break
-        }
+    print("masukkan angka: ")
+    val inputAngka = readln()!!.toInt()
+    if(inputAngka % 2 == 1 || inputAngka / inputAngka == 1 ) {
+        println("$inputAngka adalah bilangan prima")
+    }else if(inputAngka / 3..100 == 2..100){
+        println("$inputAngka bukan bilangan prima")
     }
-
-    if (!bilanganPrima)
-        print("$inputAngka   Adalah Bilangan Perima")
-    else
-        print("$inputAngka Bukan Bilangan Prima")
 }
