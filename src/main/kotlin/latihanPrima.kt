@@ -1,9 +1,25 @@
 fun main(){
-    print("masukkan angka: ")
-    val inputAngka = readln()!!.toInt()
-    if(inputAngka % 2 == 1 || inputAngka / inputAngka == 1 ) {
-        println("$inputAngka adalah bilangan prima")
-    }else if(inputAngka / 3..100 == 2..100){
-        println("$inputAngka bukan bilangan prima")
+    print("Masukkan angka : ")
+    val input = readLine()?.toIntOrNull()
+
+    if (input == null) {
+        println("Masukan tidak valid.")
+        return
     }
+
+    var i = 2
+    var isPrima = true
+
+    while (i < input) {
+        if (input % i == 0) {
+            isPrima = false
+            break
+        }
+        i++
+    }
+
+    if (isPrima) {
+        println("$input adalah bilangan prima.")
+    } else {
+        println("$input bukan bilangan prima.")}
 }
